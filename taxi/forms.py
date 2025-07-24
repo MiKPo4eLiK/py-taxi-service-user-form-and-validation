@@ -2,7 +2,7 @@ from django import forms
 from taxi.models import Driver
 import re
 from taxi.models import Car
-from django.forms import ModelForm, CheckboxSelectMultiple
+from django import forms
 
 
 class DriverCreateForm(forms.ModelForm):
@@ -30,10 +30,10 @@ class DriverLicenseUpdateForm(forms.ModelForm):
         return license_number
 
 
-class CarForm(ModelForm):
+class CarForm(forms.ModelForm):
     class Meta:
         model = Car
         fields = "__all__"
         widgets = {
-            "drivers": CheckboxSelectMultiple()
+            "drivers": forms.CheckboxSelectMultiple,
         }

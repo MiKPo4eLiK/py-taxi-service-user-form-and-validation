@@ -8,7 +8,6 @@ from .forms import DriverCreateForm
 from django.views.generic import UpdateView
 from .forms import DriverLicenseUpdateForm, CarForm
 from django.shortcuts import get_object_or_404, redirect
-from taxi.models import Car, Driver
 
 from .models import Driver, Car, Manufacturer
 
